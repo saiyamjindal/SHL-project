@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Finanza - Financial Services Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body style="    background-color: aliceblue;"> 
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s" style="margin-bottom: 5rem;">
+        
+
+        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="/add-proj" style="margin-left: 65rem;" class="nav-item nav-link active">Add Project</a>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    
+    <!-- Carousel End -->
+
+    
+<section class="section section-lg bg-gray-1" style="margin-top: 5rem;">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-9 col-lg-7 wow-outer">
+                <div class="wow slideInDown">
+                    
+                    <br>
+                    <div align="center"><img
+                            src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png"
+                            style="height:50px;width:50px;">
+                        <input id="searchbar" onkeyup="search_pro()" type="text" name="search"
+                            style="outline:0;border:0;border-radius:0;width:50%;background:transparent;border-bottom:2px solid black;"
+                            placeholder="Search Project">
+                    </div> </br></br>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        
+
+
+        <div class="row row-50" id="my">
+
+            <% var length = pro.length %>
+            <% var mod = ((pro.length)%3) %>
+            <% var k = 0 %>
+            
+            
+            <% for(var i = 0; i < (parseInt((pro.length)/3)); i++) { %>
+            <% for(var j = 0; j < 3; j++) { %>
+            <div class="col-md-6 col-lg-4 wow-outer">
+                <div class="wow fadeInUp">
+                    <article class="box-causes"
+                        style="border:1px solid black;border-radius: 25px; padding-bottom:2rem;margin:1rem;font-family:system-ui">
+                        <form method="post">
+                            <input name="id" type="hidden" value="<%=pro[k]._id%>">
+                            <h3 style="text-align: center;font-family: system-ui"><%=pro[k].title %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].technologies %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].frontend %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].backend %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].database %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].infrastructure %></h4></br>
+                            
+                            <% k++ %>
+                            <button class="btn btn-primary py-3 px-5" style="margin-left: 5rem; margin:bottom:2rem" type="submit">Know More</button>
+                        </form>
+                    </article>
+                </div>
+            </div>
+            <% } %>
+            <br>
+            <br><br>
+            <% } %>
+            <% for(var j = 0; j < (parseInt((pro.length)%3)); j++) { %>
+                <div class="col-md-6 col-lg-4 wow-outer">
+                    <div class="wow fadeInUp">
+                        <article class="box-causes"
+                        style="border:1px solid black;border-radius: 25px; padding-bottom:2rem;margin:1rem;font-family:system-ui">
+                        <form method="post">
+                            <input name="id" type="hidden" value="<%=pro[k]._id%>">
+                            <h3 style="text-align: center;font-family: system-ui"><%=pro[k].title %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].technologies %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].frontend %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].backend %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].database %></h4></br>
+                            <h4 style="text-align: center;font-family: system-ui"class="font-weight-medium" ><%=pro[k].infrastructure %></h4></br>
+                            
+                            <% k++ %>
+                            <button class="btn btn-primary py-3 px-5" style="margin-left: 5rem; margin:bottom:2rem" type="submit">Know More</button>
+                        </form>
+                    </article>
+                    </div>
+                </div>
+                <% } %>
+            
+
+    
+</section>
+    
+    <script>
+    function search_pro() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('col-md-6');
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "inline-block";
+            }
+        }
+    }
+    function sortList() {
+
+    var list, i, switching, b, shouldSwitch;
+      list = document.getElementById("my");
+      switching = true;
+      while (switching) {
+        switching = false;
+        b = list.getElementsByClassName("font-weight-medium");
+        for (i = 0; i < (b.length - 1); i++) {
+          shouldSwitch = false;
+          if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+        if (shouldSwitch) {
+          b[i].parentNode.parentNode.parentNode.parentNode.parentNode.insertBefore(b[i + 1].parentNode.parentNode.parentNode.parentNode, b[i].parentNode.parentNode.parentNode.parentNode);
+          switching = true;
+        }
+      }
+    }
+        function myFunction() {
+        var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Show more"; 
+        moreText.style.display = "none";
+        window.onload(sortList());
+        window.refresh;
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Show less"; 
+        moreText.style.display = "block";
+       window.onload(sortList());
+      }
+                            }
+                        </script>
+
+
+
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+                        
+        </div>
+    </div>
+</div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
